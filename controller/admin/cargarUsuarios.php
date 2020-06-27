@@ -40,7 +40,7 @@ function cargarUsu(){
                 <td>'.$farray["estado"].'</td>
                 <td>'.$farray["fecha_ingreso"].'</td>
                 <td><a href="editarUsuario.php?id_user='.$farray["identificacion"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarUsuario-admin.php?id_userE='.$farray["identificacion"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="../../controller/admin/eliminarUsuario.php?id_userE='.$farray["identificacion"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';
