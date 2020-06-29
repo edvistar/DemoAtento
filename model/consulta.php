@@ -60,7 +60,7 @@ class Consulta{
 
         if($farray){
             echo  "<script>alert('Usuario o correo ya registrado')</script>";
-            echo '<script>location.href="../views/admin/registrarUsuario.php"</script>';
+            echo '<script>location.href="../../registrarUsuarioStandar.php"</script>';
         }else{
             $modelo = new Conexion();
             $conexion = $modelo->get_conexion();
@@ -87,7 +87,7 @@ class Consulta{
             }else{
                 $insertar->execute();
                 echo  "<script>alert('Usuario registrado con exito')</script>";
-                echo '<script>location.href="../../views/admin/listaUsuarios.php"</script>';
+                echo '<script>location.href="../../login.php"</script>';
             }
         }  
     }

@@ -109,7 +109,7 @@
                             </div>
                             <button class="btn btn-success btn-block loginbtn">Login</button>
                         </form>
-                        <a class="btn btn-default btn-block" href="indexUsuarioStandar.php">Register</a>
+                        <a class="btn btn-default btn-block" href="registrarUsuarioStandar.php">Register</a>
                     </div>
                 </div>
             </div>
