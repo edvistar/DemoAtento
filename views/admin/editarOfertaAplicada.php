@@ -1,7 +1,7 @@
 <?php
     require_once "../../model/conexion.php";
     require_once "../../model/consulta.php";
-    require_once "../../controller/admin/cargarOfertaEdit.php";
+    require_once "../../controller/admin/cargarOfertaAplicadaEdit.php";
     require_once "../../controller/admin/verPerfil.php";
     require_once "../../model/seguridad.php";
 ?>
@@ -706,13 +706,13 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
                 <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="text-center custom-login">
-                        <h3 class="editar-usuario">EDITAR OFERTA</h3>
+                        <h3 class="editar-usuario">EDITAR OFERTA APLICADA</h3>
                         <p>Todos los campos son obligatorios</p>
                     </div>
                     <div class="hpanel">
                         <div class="panel-body">
                             <?php
-                            cargarOfertaEditar();
+                            cargarOfertaAplicadaEditar();
                             ?>  
                         </div>
                     </div>  

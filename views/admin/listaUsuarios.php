@@ -235,14 +235,6 @@ require_once "../../model/seguridad.php";
                                                         </li>
                                                         <li>
                                                         <div class="perfil">
-                                                        <!-- <
-                                                        <div class="imagen">
-                                                            <img class="" src="../'.$farray['foto'].'" alt="foto">
-                                                        </>
-                                                        <div class="info">
-                                                            <a href="">'.$farray['nombre'].'</a>
-                                                        </div>
-                                                        </div> -->
                                                             <?php 
                                                             perfil();
                                                             ?>
@@ -528,7 +520,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -544,7 +536,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example3">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -560,7 +552,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example4">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -576,7 +568,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example7">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -592,7 +584,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example2">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -608,7 +600,7 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example6">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -624,14 +616,13 @@ require_once "../../model/seguridad.php";
                                                                                             <label class="onoffswitch-label" for="example5">
                                                                                                     <span class="onoffswitch-inner"></span>
                                                                                                     <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </li>
                                                                     </ul>
-
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -640,16 +631,12 @@ require_once "../../model/seguridad.php";
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- <div class="info">
-                                        <a href="../../controller/cerrarSesion.php">CERRAR SESION</a>
-                                    </div> -->
-                
                                 </div>              
                             </div>
-                    </div>  
-            </div>  
-        </div>              
-    </nav>
+                        </div>  
+                     </div>  
+                </div>  
+             </nav>
                     <!-- Mobile Menu start Menu dispositivo movil-->
                     <div class="mobile-menu-area">
                         <div class="container">
@@ -718,27 +705,26 @@ require_once "../../model/seguridad.php";
            
 
 <!-- Formulario de registro -->
-                <div class="container-fluid-registro">
-                     <div class="row">
-                    
-                            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                            <div class="text-center custom-login mt-20px">
-                                <h3 class="registro-usuario">LISTA DE USUARIOS</h3>
-                                <!-- <p>Todos los campos son obligatorios</p> -->
-                            </div>
-                        
-                            <div class="datatable-dashv1-list custom-datatable-overright">
-                                <?php 
-                                cargarUsu();
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bienvenida">
-                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarUsuario.php")'>Registrar Usuario</button>
-                        </div>
-                </div>
+<div class="container-fluid-registro">
+        <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 col-md-6 col-sm-6 col-xs-12">
+            <div class="text-center custom-login mt-20px">
+                <h3 class="registro-usuario">LISTA DE USUARIOS</h3>
+                <!-- <p>Todos los campos son obligatorios</p> -->
+            </div>
+            <div class="datatable-dashv1-list custom-datatable-overright">
+                <?php 
+                cargarUsu();
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="bienvenida">
+        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarUsuario.php")'>Registrar Usuario</button>
+    </div>
 </div>
+
                 
 <?php
 require_once "../footer.php";

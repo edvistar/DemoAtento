@@ -10,7 +10,8 @@ $nombre      = $_POST['nombre'];
 
 
 
-if(strlen($nombre) > 0 && strlen($nombre) > 0 ){
+
+if(strlen($nombre) > 0 ){
     
     $consulta = new Consulta();
     $result = $consulta->modificarOferta($id_oferta, $nombre);

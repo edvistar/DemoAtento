@@ -1,19 +1,17 @@
 <!-- Footer -->
 <div class="footer-copyright-area">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="footer-copy-right">
-                                    <!-- link a la pagina del fabricante -->
-                                    <p>Copyright &copy; 2020 <a href="https://colorlib.com/wp/templates/">SILTO</a> All rights reserved.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-copy-right">
+                    <!-- link a la pagina del fabricante -->
+                    <p>Copyright &copy; 2020 <a href="https://colorlib.com/wp/templates/">DEMOATENTO</a> All rights reserved.</p>
                 </div>
-
-    
-    <!-- jquery
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- jquery
             ============================================ -->
             <script src="../../js/vendor/jquery-1.11.3.min.js"></script>
             <!-- bootstrap JS

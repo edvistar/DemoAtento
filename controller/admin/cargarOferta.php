@@ -11,7 +11,7 @@ function cargarOf(){
          </div>';
     }else{
         echo '
-        <table class="table table-bordered table-hover tablita">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Id Oferta</th>

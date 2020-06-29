@@ -1,16 +1,5 @@
-<?php
-// require_once "../../model/conexion.php";
-// require_once "../../model/consulta.php";
-// require_once "../../controller/admin/cargarUsuario.php";
-// require_once "../../controller/admin/verPerfil.php";
-// require_once "../../model/seguridad.php";
-
-?>
 <!doctype html>
 <html class="no-js" lang="es">
-<?php 
-// include ('../../includes/menulateralsuper.php') 
-?>
 <head>
     <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -71,21 +60,16 @@
             ============================================ -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <div class="header-advance-area">
-            
-                            
-                          
+</head>
 
-
-    </head>
-    <body>
-        
-        
-
-
-
-    
+<body>
 <!-- Formulario de registro -->
 <div class="container-fluid-registro">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="back-link back-backend">
+            <a href="index.php" class="btn btn-danger">INICIO</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
@@ -126,16 +110,15 @@
                                 <!-- <input type="text" name="cargo" class="form-control"> -->
                                 <select class="form-control select2" name="cargo" required>
                                     <option selected>Selecione su perfil</option>
-                                    <option value="supervisor">Supervisor</option>
-                                    <option value="coordinador">Coordinadora</option>
-                                    <option value="bodeguero">Bodeguero</option>
+                                    <option value="aspirante">Aspirante</option>
+                                    <!-- <option value="supervisor">Supervisor</option>
+                                    <option value="administrador">Administrador</option> -->   
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Fecha de ingreso</label>
                                 <input type="date" name="fecha_ingreso" class="form-control" required>
                             </div>
-                            
                             <div class="form-group col-md-6">
                                 <label>Foto</label>
                                 <input type="file" name="foto" class="form-control" required>
@@ -149,44 +132,18 @@
                             <button class="btn btn-success loginbtn">REGISTRAR</button>
                             <button class="btn btn-default">Cancel</button>
                         </div>
-                    </form>
-
-                    
-                   
+                    </form> 
+                     
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-    </div>
-    <!-- link a la pagina del fabricante -->
-    <!-- <div class="row">
-        <div class="col-md-12 text-center">
-            <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-        </div>
-    </div> -->
+    </div>   
 </div>
-                
-
-
-
-      </div>
-      
-  </div>
-</header>
-
-<div class="footer-copyright-area">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="footer-copy-right">
-                                    <!-- link a la pagina del fabricante -->
-                                    <p>Copyright &copy; 2020 <a href="https://colorlib.com/wp/templates/">SILTO</a> All rights reserved.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+<!--footer-->
+<?php
+include 'views/footer.php';
+?>
 </body>
 
 </html>

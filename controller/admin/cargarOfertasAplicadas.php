@@ -18,6 +18,7 @@ function cargarOfApli(){
                     <th>Nombre Oferta</th>
                     <th>Identificacion</th>
                     <th>Nombre Aspirante</th>
+                    <th>Telefono</th>
                     <th>Editar</th>
                     <th>Desactivar</th>
                 </tr>
@@ -32,9 +33,10 @@ function cargarOfApli(){
                 <td>'.$farray["nombreOferta"].'</td>
                 <td>'.$farray["identificacion"].'</td>
                 <td>'.$farray["nombreUsuario"].'</td>
+                <td>'.$farray["telefono"].'</td>
                 
-                <td><a href="editarOferta.php?id_oferta_aplicada='.$farray["id_oferta_aplicada"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarOferta.php?id_ofertaE='.$farray["id_oferta_aplicada"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="editarOfertaAplicada.php?id_oferta_aplicada='.$farray["id_oferta_aplicada"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarOfertaAplicada.php?id_ofertaAplicadaE='.$farray["id_oferta_aplicada"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';

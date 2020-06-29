@@ -209,7 +209,7 @@ class Consulta{
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
         
-        $sql = "SELECT apli.id_oferta_aplicada,  ofer.nombre as nombreOferta, apli.identificacion, usu.nombre as nombreUsuario
+        $sql = "SELECT apli.id_oferta_aplicada,  ofer.nombre as nombreOferta, apli.identificacion, usu.nombre as nombreUsuario, usu.telefono
         FROM ofertas_aplicadas as apli
         INNER JOIN oferta as ofer on ofer.id_oferta = apli.nombre
         INNER JOIN usuario as usu on usu.identificacion = apli.identificacion    
@@ -220,22 +220,6 @@ class Consulta{
         $select->execute();
 
         while($result = $select->fetch()){
-            $farray[] = $result;
-        }
-        return $farray;
-    }
-    public function cargarSolicitudes(){
-
-        $farray = null;
-
-        $modelo = new Conexion();
-        $conexion = $modelo->get_conexion();
-        
-        $sql = "SELECT * FROM solicitud";
-        $insertar = $conexion->prepare($sql);
-        $insertar->execute();
-
-        while($result = $insertar->fetch()){
             $farray[] = $result;
         }
         return $farray;
@@ -273,22 +257,21 @@ class Consulta{
         }
         return $farray;
     }
-    public function cargarSolicitud($doc){
+    public function cargarOfertaAplicada($doc){
         $farray = null;
 
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
         
-        $sql = "SELECT * FROM solicitud WHERE id_solicitud = :id_solicitud ";
+        $sql = "SELECT * FROM ofertas_aplicadas WHERE id_oferta_aplicada = :id_oferta_aplicada ";
         $select = $conexion->prepare($sql);
-        $select->bindParam(":id_solicitud", $doc);
+        $select->bindParam(":id_oferta_aplicada", $doc);
         $select->execute();
         while($result = $select->fetch()){
             $farray[] = $result;
         }
         return $farray;
     }
-
    
     public function modificarUsuario($identificacion, $nombre, $apellido, $email,$telefono, $whatsapp, $cargo, $fecha_ingreso){
         $modelo = new Conexion();
@@ -339,26 +322,26 @@ class Consulta{
             echo '<script>location.href="../../views/admin/listaOfertas.php"</script>';
         }
     } 
-    public function modificarSolicitud($id_solicitud, $solicitud, $descripcion, $cantidad_kilos){
+    public function modificarOfertaAplicada($id_oferta_aplicada, $nombre, $identificacion){
         
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
 
-        $sql = "UPDATE solicitud SET id_solicitud = :id_solicitud, solicitud = :solicitud, descripcion = :descripcion, cantidad_kilos = :cantidad_kilos WHERE id_solicitud = :id_solicitud ";
+        $sql = "UPDATE oferta_aplicada SET id_oferta_aplicada = :id_oferta_aplicada, nombre = :nombre, identificacion = :identificacion WHERE id_oferta_aplicada = :id_oferta_aplicada ";
 
         $up = $conexion->prepare($sql);
-        $up->bindParam(':id_solicitud', $id_solicitud);
-        $up->bindParam(':solicitud', $solicitud);
-        $up->bindParam(':descripcion', $descripcion);
-        $up->bindParam(':cantidad_kilos', $cantidad_kilos);
+        $up->bindParam(':id_oferta_aplicada', $id_oferta_aplicada);
+        $up->bindParam(':nombre', $nombre);
+        $up->bindParam(':identificacion', $identificacion);
+
 
         if(!$up){
             return "error al cargar recurso";
 
         }else{
             $up->execute();
-            echo  "<script>alert('Solicitud Actualizada con exito')</script>";
-            echo '<script>location.href="../../views/admin/listaSolicitud.php"</script>';
+            echo  "<script>alert('Oferta Actualizada con exito')</script>";
+            echo '<script>location.href="../../views/admin/listaOfertasAplicadas.php"</script>';
         }
     } 
 
