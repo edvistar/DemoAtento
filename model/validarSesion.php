@@ -31,9 +31,9 @@ class validarSesion{
                         echo  "<script>alert('Bienvenido Supervisor')</script>";
                         echo '<script>location.href="../../views/admin/indexSupervisor.php"</script>';
 
-                    }if($farray['cargo']=="bodeguero"){
-                        echo  "<script>alert('Bienvenido Bodeguero')</script>";
-                        echo '<script>location.href="../views/admin/registrar-usuario-admin.php"</script>';
+                    }if($farray['cargo']=="aspirante"){
+                        echo  "<script>alert('Bienvenido Aspirante')</script>";
+                        echo '<script>location.href="../../views/aspirante/indexAspirante.php"</script>';
                     }
                 }else{
                     echo  "<script>alert('Usuario Inactivo')</script>";

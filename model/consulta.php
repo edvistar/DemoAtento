@@ -116,6 +116,30 @@ class Consulta{
             echo '<script>location.href="../../views/admin/listaOfertas.php"</script>';
         }
     }  
+    public function insertOfertaAplicada($nombre, $identificacion){
+        
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+
+        $sql = "INSERT INTO ofertas_aplicadas (nombre, identificacion) VALUES ( :nombre, :identificacion)";
+
+        $insertar = $conexion->prepare($sql);
+        //$insertar->bindParam(':id_oferta', $id_oferta);
+        $insertar->bindParam(':nombre', $nombre);
+        $insertar->bindParam(':identificacion', $identificacion);
+        
+        
+        
+
+        if(!$insertar){
+            return "error al cargar recurso";
+
+        }else{
+            $insertar->execute();
+            echo  "<script>alert('Oferta Aplicada con exito')</script>";
+            echo '<script>location.href="../../views/aspirante/aplicarOfertas.php"</script>';
+        }
+    } 
     public function insertSolicitudes($id_solicitud, $solicitud, $descripcion, $cantidad_kilos){
         
         $modelo = new Conexion();
@@ -151,10 +175,10 @@ class Consulta{
         $conexion = $modelo->get_conexion();
         
         $sql = "SELECT * FROM usuario";
-        $insertar = $conexion->prepare($sql);
-        $insertar->execute();
+        $select = $conexion->prepare($sql);
+        $select->execute();
 
-        while($result = $insertar->fetch()){
+        while($result = $select->fetch()){
             $farray[] = $result;
         }
         return $farray;
@@ -170,10 +194,32 @@ class Consulta{
         $conexion = $modelo->get_conexion();
         
         $sql = "SELECT * FROM oferta";
-        $insertar = $conexion->prepare($sql);
-        $insertar->execute();
+        $select = $conexion->prepare($sql);
+        $select->execute();
 
-        while($result = $insertar->fetch()){
+        while($result = $select->fetch()){
+            $farray[] = $result;
+        }
+        return $farray;
+    }
+    public function cargarOfertasAplicadas(){
+
+        $farray = null;
+
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        
+        $sql = "SELECT apli.id_oferta_aplicada,  ofer.nombre as nombreOferta, apli.identificacion, usu.nombre as nombreUsuario
+        FROM ofertas_aplicadas as apli
+        INNER JOIN oferta as ofer on ofer.id_oferta = apli.nombre
+        INNER JOIN usuario as usu on usu.identificacion = apli.identificacion    
+        
+        
+        ";
+        $select = $conexion->prepare($sql);
+        $select->execute();
+
+        while($result = $select->fetch()){
             $farray[] = $result;
         }
         return $farray;

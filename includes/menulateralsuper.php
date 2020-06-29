@@ -32,6 +32,7 @@ require_once "../../model/seguridad.php";
                                 <!-- crud producto -->
                                 <li><a title="registro" href="registrarOferta.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar oferta</span></a></li>
                                 <li><a title="ver-usuarios" href="listaOfertas.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Ofertas</span></a></li>
+                                <li><a title="ver-usuarios" href="listaOfertasAplicadas.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Ofertas Aplicadas</span></a></li>
                                 <!-- crud solicitud -->
                                 <!-- <li><a title="registro" href="registrarSolicitud.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Solicitud</span></a></li> -->
                                 <!-- <li><a title="ver-usuarios" href="listaSolicitud.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Solicitudes</span></a></li> -->

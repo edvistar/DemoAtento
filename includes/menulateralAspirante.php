@@ -1,9 +1,9 @@
 <?php
-require_once "model/conexion.php";
-//require_once "../../model/validarSesion.php";
-require_once "model/consulta.php";
-//require_once "../../controller/admin/verPerfil.php";
-//require_once "../../model/seguridad.php";
+require_once "../../model/conexion.php";
+require_once "../../model/validarSesion.php";
+require_once "../../model/consulta.php";
+require_once "../../controller/aspirante/verPerfilAspirante.php";
+require_once "../../model/seguridadAspirante.php";
 ?>
 <div class="left-sidebar-pro">
             <nav id="sidebar" class="">
@@ -21,7 +21,7 @@ require_once "model/consulta.php";
 							</a>
                             <ul class="submenu-angle" aria-expanded="true">
                             <!-- //crud usuario -->
-                                <li><a title="registro" href="registrarUsuarioStandar.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrate</span></a></li>
+                                <li><a title="registro" href="aplicarOfertas.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Ver Ofertas</span></a></li>
                                 <!-- <li><a title="ver-usuarios" href="listaUsuarios.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">Lista Usuarios</span></a></li> -->
                                 <!-- crud centro -->
                                 <!-- <li><a title="registro" href="registrarCentros.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">Registrar Centros</span></a></li>
