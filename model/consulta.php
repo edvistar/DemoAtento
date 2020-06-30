@@ -263,7 +263,7 @@ class Consulta{
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
         
-        $sql = "SELECT * FROM ofertas_aplicadas WHERE id_oferta_aplicada = :id_oferta_aplicada ";
+        $sql = "SELECT id_oferta_aplicada, nombre, identificacion FROM ofertas_aplicadas WHERE id_oferta_aplicada = :id_oferta_aplicada ";
         $select = $conexion->prepare($sql);
         $select->bindParam(":id_oferta_aplicada", $doc);
         $select->execute();
@@ -359,6 +359,22 @@ class Consulta{
             $delete->execute();
             echo  "<script>alert('OFERTA ELIMINADA CON EXITO')</script>";
             echo '<script>location.href="../../views/admin/listaOfertas.php"</script>';
+        }
+    }
+    public function eliminarOfertasAplicadas($idEliminar){
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        $sql = "DELETE FROM ofertas_aplicadas WHERE id_oferta_aplicada = :id_oferta_aplicada";
+        $delete = $conexion->prepare($sql);
+        $delete->bindParam(':id_oferta_aplicada', $idEliminar);
+
+        if(!$delete){
+            echo  "<script>alert('ERROR AL ELIMINAR')</script>";
+            echo '<script>location.href="../../views/admin/listaOfertasAplicadas.php"</script>';
+        }else{
+            $delete->execute();
+            echo  "<script>alert('OFERTA ELIMINADA CON EXITO')</script>";
+            echo '<script>location.href="../../views/admin/listaOfertasAplicadas.php"</script>';
         }
     }
 
